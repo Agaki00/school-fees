@@ -5,7 +5,7 @@ session_start(); // For CSRF and future sessions
 require_once __DIR__ . '/vendor/autoload.php';
 
 // MongoDB Connection (use env var for security)
-$mongoUri = getenv('MONGODB_URI') ?: 'mongodb+srv://<your_atlas_user>:<your_password>@yourcluster.mongodb.net/school_fees?retryWrites=true&w=majority'; 
+$mongoUri = getenv('MONGODB_URI') ?: 'mongodb+srv://villageboyf_db_user:<db_password>@cluster0.pllfgeu.mongodb.net/?appName=Cluster0'; 
 // CHANGE FOR LIVE: Set MONGODB_URI in hosting environment variables
 $client = new MongoDB\Client($mongoUri);
 $collection = $client->school_fees->transactions;
